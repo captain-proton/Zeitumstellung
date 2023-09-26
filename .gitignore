@@ -1,6 +1,9 @@
+# Created by https://www.toptal.com/developers/gitignore/api/git,python,virtualenv,jupyternotebooks,direnv
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,python,virtualenv,jupyternotebooks,direnv
 
-# Created by https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python,git,virtualenv
-# Edit at https://www.toptal.com/developers/gitignore?templates=jupyternotebooks,python,git,virtualenv
+### direnv ###
+.direnv
+.envrc
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -125,7 +128,22 @@ target/
 #   install all needed dependencies.
 #Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff
@@ -168,6 +186,18 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+### Python Patch ###
+# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
+
+
 ### VirtualEnv ###
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
@@ -180,4 +210,4 @@ cython_debug/
 pyvenv.cfg
 pip-selfcheck.json
 
-# End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python,git,virtualenv
+# End of https://www.toptal.com/developers/gitignore/api/git,python,virtualenv,jupyternotebooks,direnv
